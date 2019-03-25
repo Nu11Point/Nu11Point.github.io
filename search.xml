@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[圈套]]></title>
+    <url>%2F2019%2F03%2F25%2F%E5%9C%88%E5%A5%97%2F</url>
+    <content type="text"><![CDATA[很多时候我们玩游戏，追剧看似非常休闲，非常令人放松。人开始慢慢成长，就慢慢把一些事实看明白。很多时候都在劝自己，不用活的那么明白。像别人一样多好，玩玩竞技游戏，追追最新的剧集，下班就窝在沙发里，干这些事情。但是越是这样，就越觉得自己消沉了，有一丝丝堕落的感觉。有一天我在面馆吃面条，看到老板10岁左右的女儿动作娴熟的在刷抖音之类视频APP。不觉的一惊，我眼里的她不就是别人眼里的我嘛。其实我这个人我并不在乎别人是怎么看我的。让我震惊的是，自己和面前这个小女孩一样当时并不清楚自己在做什么，想要什么。毫无疑问，我觉得我们是陷入了一种无法自行break的for循环里，这个函数并不是他所声明的那样的。详细的分析发现，各种各类游戏都存在着相同的模式，这可能也是他们生存之本，那就是盈利模式。随着游戏运营时间不断的递增，这些模式慢慢就变的繁琐和公式化。这款游戏就慢慢失去了原有的充满想象力的，我认为的最吸引人最核心的部分。在资本的压榨下，最终各种网络游戏变成了可怕的吸血终端。]]></content>
+      <categories>
+        <category>life</category>
+      </categories>
+      <tags>
+        <tag>所思所想</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[MySQL安装]]></title>
     <url>%2F2019%2F03%2F23%2FMySQL%E5%AE%89%E8%A3%85%2F</url>
     <content type="text"><![CDATA[源码编译必备工具包 工具 介绍 gcc g++ mysql5.6开始需要g++进行编译 cmake mysql5.5开始使用cmake2.8以上 bison 语法解析器需要用bison编译 ncourses-devel 用于终端操作的开发包 zlib mysql用zlib进行压缩 功能需要的包 工具 介绍 libxml 用于xml输入输出方式的支持 openssl 用于安全套接字方式通信 dtrace 用于诊断mysql问题 编译参数 参数 介绍 CMAKE_BUILD_TYPE 编译的版本类型：RelWithDebInfo和Debug，不同之处是RelWithDebInfo会进行优化。 CMAKE_INSTALL_PREFIX 指定make install安装的目标路径。 SYSCONFDIR 指定配置文件的默认路径。 MYSQL_DATADIR 指定data目录的默认路径。 WITH_DEBUG 指定是否有debugging信息，一般用于源码调试时，打开WITH_DEBUG，生产环境关闭。 ENABLED_PROFILING 指定是否可以使用show profile显示操作执行的详细信息。 DEFAULT_CHARSET 指定默认字符集，可以在启动的配置文件中指定。 DEFAULT_COLLATION 指定默认字符比较、排序的规则。 WITH_EXTRA_CHARSETS 指定其他可能使用的字符集。 WITH_SSL 指定SSL的类型，从5.6.6开始默认bundled类型，此外也可以指定SSL库的路径地址。 WITH_ZLIB 指定zlib的类型，用于压缩功能。 WITH_storage_STORAGE_ENGINE 指定编译支持的存储引擎，默认支持MyISAM，MERGE，MEMORY，CSV存储引擎。 ENABLED_LOCAL_INFILE 指定是否允许使用load data infile功能。 WITH_EMBEDDED_SERVER 指定是否编译libmysqld嵌入式库。 INSTALL_LAYOUT 指定安装的布局类型。 编译环境及命令CFLAGS=”-O3 -g -fno-exceptions -static-libgcc -fno-omit-frame-pointer -fno-strict-aliasing”CXX=g++CXXFLAGS=”-O3 -g -fno-exceptions -fno-rtti -static-libgcc -fno-omit-frame-pointer -fno-strict-aliasing”export CFLAGS CXX CXXFLAGScmake . -DCMAKE_INSTALL_PREFIX=/usr/local/mysql \ -DMYSQL_DATADIR=/data/mydata \ -DSYSCONFDIR=/etc \ -DWITH_PARTITION_STORAGE_ENGINE=1 \ -DWITH_INNOBASE_STORAGE_ENGINE=1 \ -DWITH_ARCHIVE_STORAGE_ENGINE=1 \ -DWITH_BLACKHOLE_STORAGE_ENGINE=1 \ -DWITH_PREFSCHEMA_STORAGE_ENGINE=1 \ -DENABLED_LOCAL_INFILE=1 \ -DWITH_EMBEDDED_SERVER=1 \ -DINSTALL_LAYOUT=STANDALONE \ -DWITH_READLINE=1 \ -DWITH_SSL=bundled \ -DWITH_ZLIB=bundled \ -DWITH_LIBWRAP=0 \ -DMYSQL_UNIX_ADDR=/tmp/mysql.sock \ -DDEFAULT_CHARSET=utf8 \ -DDEFAULT_COLLATION=utf8_general_ci make -j &amp; make install 源码包下载前端页面拼写出来的下载地址MySQL5.5.37 功能定制规模化部署MySQL打rpm包mkdir rpmcd rpm 编写mysql.spec文件rpmbuild -bb mysql.spec 配置文件模版定义配置模版生成唯一的server_id每个实例的server_id必须不同，否则会造成循环复制，可以根据IP地址来生成 数据目录模版版本升级物理升级备份恢复升级大版本升级5.5升5.6是必须通过备份恢复进行升级小版本升级5.5.10到5.5.37只需要替换bin/mysqld和share/english/errmsg.sys最保险的方式是把bin，lib，share目录全部替换掉最后链接到数据库执行mysql_upgrade命令 问题小版本的替换和跨版本升级不是完全可靠的，mysql_upgrade会解决掉大多数的问题，如果mysql_upgrade本身有bug或者升级过程中数据错乱了都是不可逆转的 逻辑升级这种升级是最稳妥的 逻辑备份逻辑备份出来都是SQL96或者SQL99的语法，新版本都会兼容老版本的SQL语法 资源池管理资源管理需要有水位 实例管理单机多实例 cgroup 管控IO CPU innodb进程池管理内存 ##计算单个实例的资源利用率]]></content>
