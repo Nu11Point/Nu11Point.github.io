@@ -96,24 +96,25 @@
 
 
 
-  <meta name="description" content="A man in the hazard.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="关于作者">
-<meta property="og:url" content="http://nu11point.github.io/about/index.html">
+  <meta name="description" content="MySQL优化参数优化 innodb_buffer_pool_size单实例性能设置为系统内存75%左右实例需求提高内存的命中率 90%以上即可实例标准化根据buffer_pool设置各种不同的规格，根据业务的形态选择规格注：源码中在innodb存储引擎层搜索srv_buf_pool_size(在srv0srv.c（定义） srv0start.c（实现）文件中) innodb_buffer_poo">
+<meta name="keywords" content="mysql">
+<meta property="og:type" content="article">
+<meta property="og:title" content="MySQL优化">
+<meta property="og:url" content="http://nu11point.github.io/2019/03/29/MySQL优化/index.html">
 <meta property="og:site_name" content="Nu11Point">
-<meta property="og:description" content="A man in the hazard.">
+<meta property="og:description" content="MySQL优化参数优化 innodb_buffer_pool_size单实例性能设置为系统内存75%左右实例需求提高内存的命中率 90%以上即可实例标准化根据buffer_pool设置各种不同的规格，根据业务的形态选择规格注：源码中在innodb存储引擎层搜索srv_buf_pool_size(在srv0srv.c（定义） srv0start.c（实现）文件中) innodb_buffer_poo">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-04-05T01:02:02.488Z">
+<meta property="og:updated_time" content="2019-04-05T01:23:14.840Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="关于作者">
-<meta name="twitter:description" content="A man in the hazard.">
+<meta name="twitter:title" content="MySQL优化">
+<meta name="twitter:description" content="MySQL优化参数优化 innodb_buffer_pool_size单实例性能设置为系统内存75%左右实例需求提高内存的命中率 90%以上即可实例标准化根据buffer_pool设置各种不同的规格，根据业务的形态选择规格注：源码中在innodb存储引擎层搜索srv_buf_pool_size(在srv0srv.c（定义） srv0start.c（实现）文件中) innodb_buffer_poo">
 
 
 
 
 
 
-  <link rel="canonical" href="http://nu11point.github.io/about/">
+  <link rel="canonical" href="http://nu11point.github.io/2019/03/29/MySQL优化/">
 
 
 
@@ -123,7 +124,7 @@
   };
 </script>
 
-  <title>关于作者 | Nu11Point</title>
+  <title>MySQL优化 | Nu11Point</title>
   
 
 
@@ -230,7 +231,7 @@
         
         
           
-          <li class="menu-item menu-item-about menu-item-active">
+          <li class="menu-item menu-item-about">
 
     
     
@@ -328,31 +329,6 @@
   
     
 
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
-
   
 
   
@@ -409,51 +385,17 @@
 
   <div id="posts" class="posts-expand">
     
-    
-    
-    <div class="post-block page">
-      <header class="post-header">
-
-<h1 class="post-title" itemprop="name headline">关于作者
-
-</h1>
-
-<div class="post-meta">
-  
-  
 
 
-
-</div>
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
-        
-        
-          <p>A man in the hazard.</p>
-
-        
-      </div>
-      
-      
-      
-    </div>
-    
-
-
-
-    
-    
-    
   </div>
 
 
           </div>
           
+
+  
+
+
 
         </div>
         
@@ -473,8 +415,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -594,6 +545,23 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-text">MySQL优化</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-text">参数优化</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-text">innodb_buffer_pool_size</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-text">innodb_buffer_pool_instances</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-text">innodb_log_file_size</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-text">innodb_log_buffer_size</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-text">innodb_thread_concurrency</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-text">innodb_io_capacity</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-text">innodb_max_dirty_pages_pct</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-text">innodb_flush_method</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-text">innodb_file_per_table</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-text">innodb_flush_log_at_trx_commit</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-text">sync_binlog</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-text">系统优化</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-text">NUMA</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-text">malloc</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-text">网卡</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-text">内存插法</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       
@@ -756,6 +724,8 @@
 
   
 
+
+  
 
 
   
